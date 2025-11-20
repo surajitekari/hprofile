@@ -21,3 +21,21 @@ Then look for the file :
 - /src/main/resources/db_backup.sql
 - db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
 - > mysql -u <user_name> -p accounts < db_backup.sql
+
+# Configuration for keysetup & details
+
+$ssh-keygen
+--set public key in github ssh key configuration
+$export GIT_SSH_COMMAND="ssh -i ~/.ssh/hprofile"
+$git clone git@github.com:surajitekari/hprofile.git
+$unset GIT_SSH_COMMAND
+$git config core.sshCommand "ssh -i ~/.ssh/hprofie -F /dev/null"
+$cat .git/config
+
+$git config user.name <<username>>
+$git config user.email <<email>>
+
+# Marketplace
+https://github.com/marketplace/actions/sonar-scanner
+https://github.com/marketplace/actions/sonarqube-quality-gate-check
+
