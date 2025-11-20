@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: code checkout
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
     
     - name: maven test
-    - run: mvn test
+      run: mvn test
 
     - name: Checkstyle 
-    - run: mvn checkstyle:checkstyle
+      run: mvn checkstyle:checkstyle
